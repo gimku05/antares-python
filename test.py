@@ -1,9 +1,10 @@
 from antares_http import antares
+import sys
 
 projectName = 'weather-station'
 deviceName = 'station1'
 
-antares.setAccessKey('b4e89ce2436b9d90:202c7b14b849c084')
+antares.setAccessKey('b4e89ce2436b9d90:202c7b14b849c084', debug=True)
 
 dataToSend = {
     'temp' : 77,
