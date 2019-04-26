@@ -11,14 +11,14 @@ pip install antares-http
 ```python
 from antares_http import antares
 
-antares.setAccessKey('b4e89ce2436b9d90:202c7b14b849c084', debug=True)
+antares.setAccessKey('your-access-key', debug=True)
 
 myData = {
     'temp' : 77,
     'windsp' : 10
 }
 
-antares.send(myData, projectName, deviceName, debug=True)
+antares.send(myData, 'your-project-name', 'your-device-name', debug=True)
 ```
 
 ### API Reference
