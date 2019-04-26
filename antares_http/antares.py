@@ -34,10 +34,10 @@ def getAccessKey():
     return _antaresAccessKey
 
 def get(projectName, deviceName, debug=True):
-    print('Requesting...')
+    # print('Requesting...')
     url = 'https://platform.antares.id:8443/~/antares-cse/antares-id/{}/{}/la'.format(projectName, deviceName)
     
-    print('Access key: ', getAccessKey())
+    # print('Access key: ', getAccessKey())
 
     headers = {
         'X-M2M-Origin' : getAccessKey(),
@@ -70,10 +70,10 @@ def get(projectName, deviceName, debug=True):
     return finalResponse
 
 def getDevices(projectName, debug=True):
-    print('Requesting...')
+    # print('Requesting...')
     url = 'https://platform.antares.id:8443/~/antares-cse/antares-id/{}?fu=1&ty=3'.format(projectName)
     
-    print('Access key: ', getAccessKey())
+    # print('Access key: ', getAccessKey())
 
     headers = {
         'X-M2M-Origin' : getAccessKey(),
@@ -96,13 +96,13 @@ def getDevices(projectName, debug=True):
     return devicesList
 
 def getAll(projectName, deviceName, limit=0, debug=False):
-    print('Requesting...')
+    # print('Requesting...')
     if(limit != 0):
         url = 'https://platform.antares.id:8443/~/antares-cse/antares-id/{}/{}?fu=1&ty=4&drt=1&lim={}'.format(projectName, deviceName, limit)
     else:
         url = 'https://platform.antares.id:8443/~/antares-cse/antares-id/{}/{}?fu=1&ty=4&drt=1'.format(projectName, deviceName)
 
-    print('Access key: ', getAccessKey())
+    # print('Access key: ', getAccessKey())
 
     headers = {
         'X-M2M-Origin' : getAccessKey(),
@@ -137,7 +137,10 @@ def getAll(projectName, deviceName, limit=0, debug=False):
             'last_modified_time': response['lt'],
             'content' : parsedContent
         }
-        print('Get success:{} out of {}'.format(dataCounter, len(allData)))
+
+        if(debug):
+            print('Get success:{} out of {}'.format(dataCounter, len(allData)))
+        
         dataStorage.append(finalResponse)
         if(limit > 0):
             if(dataCounter >= limit):
@@ -153,13 +156,13 @@ def getAll(projectName, deviceName, limit=0, debug=False):
                 return dataStorage
 
 def getAllId(projectName, deviceName, limit=0, debug=False):
-    print('Requesting...')
+    # print('Requesting...')
     if(limit != 0):
         url = 'https://platform.antares.id:8443/~/antares-cse/antares-id/{}/{}?fu=1&ty=4&drt=1&lim={}'.format(projectName, deviceName, limit)
     else:
         url = 'https://platform.antares.id:8443/~/antares-cse/antares-id/{}/{}?fu=1&ty=4&drt=1'.format(projectName, deviceName)
 
-    print('Access key: ', getAccessKey())
+    # print('Access key: ', getAccessKey())
 
     headers = {
         'X-M2M-Origin' : getAccessKey(),
@@ -177,10 +180,10 @@ def getAllId(projectName, deviceName, limit=0, debug=False):
     return allData
 
 def send(data, projectName, deviceName, debug=False):
-    print('Requesting...')
+    # print('Requesting...')
     url = 'https://platform.antares.id:8443/~/antares-cse/antares-id/{}/{}'.format(projectName, deviceName)
     
-    print('Access key: ', getAccessKey())
+    # print('Access key: ', getAccessKey())
 
     headers = {
         'X-M2M-Origin' : getAccessKey(),
@@ -201,8 +204,8 @@ def send(data, projectName, deviceName, debug=False):
     }
     dataTemplate = json.dumps(dataTemplate)
 
-    print(dataTemplate)
-    print(url)
+    # print(dataTemplate)
+    # print(url)
 
     r = requests.post(url, headers=headers, data=dataTemplate)
     response = r.json()
