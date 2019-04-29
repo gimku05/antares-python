@@ -38,4 +38,4 @@ dataToSend = {
 # devices = antares.getDevices(projectName)
 
 # Create device
-createdDevice = antares.createDevice(projectName, 'python-device');
+# createdDevice = antares.createDevice(projectName, 'python-device');
