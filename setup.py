@@ -11,7 +11,7 @@ setuptools.setup(
     description="A Python Library to simplify connection to Antares IoT Platform",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://github.com/antaresdocumentation/antares-python",
     packages=setuptools.find_packages(),
     install_requires=[
         'requests',

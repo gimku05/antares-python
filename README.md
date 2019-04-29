@@ -36,43 +36,43 @@ print(latestData['content'])
 ```
 
 ### API Reference
-* `setAccessKey(access-key)`
-Set the `access-key` parameter to your Antares access key.
+* `setAccessKey(access-key)`  
+Set the `access-key` parameter to your Antares access key.  
 
-* `setDebug(status)`
-Set whether you want to show debug results of every HTTP request to Antares or not, can be set to `True` or `False`.
+* `setDebug(status)`  
+Set whether you want to show debug results of every HTTP request to Antares or not, can be set to `True` or `False`.  
 
-* `get(projectName, deviceName)`
-    Get the latest data from your Antares device.
-    return: latest data (json)
-* `getAll(projectName, deviceName, limit=integer)`
-    Get a chunk of data from your Antares project, you can set the limitation by setting the `limit` parameter.
-    return: Chunk of data from your Antares device 
+* `get(projectName, deviceName)`  
+    Get the latest data from your Antares device.  
+    return: latest data (json)  
+* `getAll(projectName, deviceName, limit=integer)`  
+    Get a chunk of data from your Antares project, you can set the limitation by setting the `limit` parameter.  
+    return: Chunk of data from your Antares device  
 
-* `getAllId(projectName, deviceName, limit=integer)`
-    Get a chunk of data IDs from your Antares project, you can set the limitation by setting the `limit` parameter.
-    return: Chunk of data IDs from your Antares device 
+* `getAllId(projectName, deviceName, limit=integer)`  
+    Get a chunk of data IDs from your Antares project, you can set the limitation by setting the `limit` parameter.  
+    return: Chunk of data IDs from your Antares device  
 
-* `getSpecific(projectName, deviceName, data-id)`
-    Get specific data from your Antares device, the `data-id` parameter looks like this: `cin_81723819`.
-    return: Specific device data
+* `getSpecific(projectName, deviceName, data-id)`  
+    Get specific data from your Antares device, the `data-id` parameter looks like this: `cin_81723819`.  
+    return: Specific device data  
 
-* `getDeviceId(projectName, deviceName)`
-    Get your Antares device ID. 
-    return: antares device ID (i.e. `cnt-44637281`)
+* `getDeviceId(projectName, deviceName)`  
+    Get your Antares device ID.  
+    return: antares device ID (i.e. `cnt-44637281`)  
 
-* `send(data, projectName, deviceName)`
-    Send data to your Antares project. This can be a python dictionary or string.
-    return: POST response data from Antares
+* `send(data, projectName, deviceName)`  
+    Send data to your Antares project. This can be a python dictionary or string.  
+    return: POST response data from Antares  
 
-* `sendById(data, device-id)`
-    Send data to your Antares device through Antares device ID which looks like `cnt-281727372`
-    return: POST response data from Antares
+* `sendById(data, device-id)`  
+    Send data to your Antares device through Antares device ID which looks like `cnt-281727372`  
+    return: POST response data from Antares  
 
-* `createDevice(projectName, newDeviceName)`
-    Create an Antares device in your Project.
-    return: device creation response
+* `createDevice(projectName, newDeviceName)`  
+    Create an Antares device in your Project.  
+    return: device creation response  
 
-* `getDevices(projectName)`
-    Get all device names of Antares project
-    return: antares device names
+* `getDevices(projectName)`  
+    Get all device names of Antares project  
+    return: antares device names  
