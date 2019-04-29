@@ -17,7 +17,7 @@ dataToSend = {
 # latestData = antares.get(projectName, deviceName)
 
 # Get all data
-# allData = antares.getAll(projectName, deviceName, limit=10)
+allData = antares.getAll(projectName, deviceName, limit=10)
 
 # Get only data IDs
 # allDataId = antares.getAllId(projectName, deviceName, limit=50)

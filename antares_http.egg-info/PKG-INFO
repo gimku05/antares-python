@@ -1,13 +1,13 @@
 Metadata-Version: 2.1
 Name: antares-http
-Version: 1.1.1
+Version: 1.1.2
 Summary: A Python Library to simplify connection to Antares IoT Platform
 Home-page: https://github.com/antaresdocumentation/antares-python
 Author: Antares Support Team
 Author-email: support@antares.id
 License: UNKNOWN
 Description: # Antares Python
-        # Antares Python
+        <img src="https://antares.id/assets/img/antarespy.png" width="300">  
         This is a Python library to simplify the connection to Antares IoT Platform. For more information about the platform itself, please visit the [official site](https://antares.id).  
         
         ## Installation
