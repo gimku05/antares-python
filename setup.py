@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="antares-http",
-    version="1.1.3",
+    version="1.1.4",
     author="Antares Support Team",
     author_email="support@antares.id",
     description="A Python Library to simplify connection to Antares IoT Platform",

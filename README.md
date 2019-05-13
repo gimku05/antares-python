@@ -1,4 +1,6 @@
 # Antares Python
+[![PyPI version](https://badge.fury.io/py/antares-http.svg)](https://badge.fury.io/py/antares-http)  
+
 <img src="https://antares.id/assets/img/antarespy.png" width="300">  
 
 This is a Python library to simplify the connection to Antares IoT Platform. For more information about the platform itself, please visit the ![official site](https://antares.id).  
